@@ -1,0 +1,45 @@
+﻿@{
+        ViewData["Title"] = "Account Page";
+}
+    
+
+<div class="container ">
+    <h1>Account</h1>
+
+    <div class="row">
+       <div class="col">
+            <h3>Login</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password/phoneNo</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+       </div>
+       <div class="col">
+           <form>
+                <h3>Sign up</h3>
+                <div class="mb-3">
+                    <label for="signupName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="signupName" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="signupEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="signupEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="signupNumber" class="form-label">Password/phoneNo</label>
+                    <input type="number" class="form-control" id="signupNumber" />
+                </div>
+
+                <button type="submit" class="btn btn-primary" asp-action="signupUser">Sign up</button>
+           </form>
+       </div>
+    </div>
+</div>

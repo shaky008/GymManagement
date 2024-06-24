@@ -1,0 +1,59 @@
+﻿@{
+	ViewData["Title"] = "Admin Main Page";
+}
+
+<div>
+    <h1>MAIN ADMIN</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Membership Type</th>
+                <th scope="col">Membership Length</th>
+                <th scope="col">Membership Cost</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        @foreach (var gymDetail in ViewBag.GymDetail)
+	{
+       
+            <tbody>
+                <tr>
+                    <td scope="row">@gymDetail.MembershipType</td>
+                    <td scope="row">@gymDetail.MembershipLength</td>
+                    <td scope="row">@gymDetail.MembershipCost</td>
+                    <td>
+                        <button class="btn-primary">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+	}
+    </table>
+    <h1>Existing Users</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Customer Email</th>
+                <th scope="col">Customer Phone No</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">User Type</th>
+            </tr>
+        </thead>
+        @foreach (var userDetail in ViewBag.MemDetail)
+        {
+            <tbody>
+                <tr>
+                    <td scope="row">@userDetail.UserId</td>
+                    <td scope="row">@userDetail.UserEmail</td>
+                    <td scope="row">@userDetail.UserNumber</td>
+                    <td scope="row">@userDetail.UserName</td>
+                    <td scope="row">@userDetail.UserType</td>
+                </tr>
+            </tbody>
+        }
+
+    </table>
+
+</div>
+
+
